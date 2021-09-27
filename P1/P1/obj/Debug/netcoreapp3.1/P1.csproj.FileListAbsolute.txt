@@ -1,0 +1,17 @@
+C:\dev\cpsc3200\P1\obj\Debug\netcoreapp3.1\P1.csproj.AssemblyReference.cache
+C:\dev\cpsc3200\P1\obj\Debug\netcoreapp3.1\P1.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\cpsc3200\P1\obj\Debug\netcoreapp3.1\P1.AssemblyInfoInputs.cache
+C:\dev\cpsc3200\P1\obj\Debug\netcoreapp3.1\P1.AssemblyInfo.cs
+C:\dev\cpsc3200\P1\obj\Debug\netcoreapp3.1\P1.csproj.CoreCompileInputs.cache
+C:\dev\cpsc3200\P1\bin\Debug\netcoreapp3.1\P1.exe
+C:\dev\cpsc3200\P1\bin\Debug\netcoreapp3.1\P1.deps.json
+C:\dev\cpsc3200\P1\bin\Debug\netcoreapp3.1\P1.runtimeconfig.json
+C:\dev\cpsc3200\P1\bin\Debug\netcoreapp3.1\P1.runtimeconfig.dev.json
+C:\dev\cpsc3200\P1\bin\Debug\netcoreapp3.1\P1.dll
+C:\dev\cpsc3200\P1\bin\Debug\netcoreapp3.1\P1.pdb
+C:\dev\cpsc3200\P1\bin\Debug\netcoreapp3.1\3200_P1_Entree.dll
+C:\dev\cpsc3200\P1\bin\Debug\netcoreapp3.1\3200_P1_Entree.pdb
+C:\dev\cpsc3200\P1\obj\Debug\netcoreapp3.1\P1.csproj.CopyComplete
+C:\dev\cpsc3200\P1\obj\Debug\netcoreapp3.1\P1.dll
+C:\dev\cpsc3200\P1\obj\Debug\netcoreapp3.1\P1.pdb
+C:\dev\cpsc3200\P1\obj\Debug\netcoreapp3.1\P1.genruntimeconfig.cache

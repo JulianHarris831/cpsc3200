@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "P1/1.0.0": {
+        "dependencies": {
+          "3200_P1_Entree": "1.0.0"
+        },
+        "runtime": {
+          "P1.dll": {}
+        }
+      },
+      "3200_P1_Entree/1.0.0": {
+        "runtime": {
+          "3200_P1_Entree.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "P1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "3200_P1_Entree/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
