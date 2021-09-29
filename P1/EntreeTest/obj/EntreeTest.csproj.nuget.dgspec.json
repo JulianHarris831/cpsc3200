@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\cpsc3200\\EntreeTest\\EntreeTest.csproj": {}
+    "C:\\dev\\cpsc3200\\P1\\EntreeTest\\EntreeTest.csproj": {}
   },
   "projects": {
-    "C:\\dev\\cpsc3200\\EntreeTest\\EntreeTest.csproj": {
+    "C:\\dev\\cpsc3200\\P1\\EntreeTest\\EntreeTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\cpsc3200\\EntreeTest\\EntreeTest.csproj",
+        "projectUniqueName": "C:\\dev\\cpsc3200\\P1\\EntreeTest\\EntreeTest.csproj",
         "projectName": "EntreeTest",
-        "projectPath": "C:\\dev\\cpsc3200\\EntreeTest\\EntreeTest.csproj",
+        "projectPath": "C:\\dev\\cpsc3200\\P1\\EntreeTest\\EntreeTest.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\cpsc3200\\EntreeTest\\obj\\",
+        "outputPath": "C:\\dev\\cpsc3200\\P1\\EntreeTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

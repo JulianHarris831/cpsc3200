@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\dev\\cpsc3200\\P1\\P1.csproj",
+      "projectUniqueName": "C:\\dev\\cpsc3200\\P1\\P1\\P1.csproj",
       "projectName": "P1",
-      "projectPath": "C:\\dev\\cpsc3200\\P1\\P1.csproj",
+      "projectPath": "C:\\dev\\cpsc3200\\P1\\P1\\P1.csproj",
       "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-      "outputPath": "C:\\dev\\cpsc3200\\P1\\obj\\",
+      "outputPath": "C:\\dev\\cpsc3200\\P1\\P1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -55,8 +55,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\dev\\cpsc3200\\3200_P1_Entree\\3200_P1_Entree.csproj": {
-              "projectPath": "C:\\dev\\cpsc3200\\3200_P1_Entree\\3200_P1_Entree.csproj"
+            "C:\\dev\\cpsc3200\\P1\\3200_P1_Entree\\3200_P1_Entree.csproj": {
+              "projectPath": "C:\\dev\\cpsc3200\\P1\\3200_P1_Entree\\3200_P1_Entree.csproj"
             }
           }
         }

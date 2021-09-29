@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5O1EPiPgeOioNuaQiDCvJHtDxYj1E7664qcS/6oTEalCPNHi9JV279nsundmzm+uy3YnqhxlpF8sLY1YX4IYMw==",
+  "dgSpecHash": "FvadOZn59R1Y7XK5oBpQvQbY7z1oBtwO4HJWqoVLUweFTFKD7AJM4wrPDUEMAubfrpn/ZKwhket52Z67LSME4Q==",
   "success": true,
-  "projectFilePath": "C:\\dev\\cpsc3200\\EntreeTest\\EntreeTest.csproj",
+  "projectFilePath": "C:\\dev\\cpsc3200\\P1\\EntreeTest\\EntreeTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\julia\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
     "C:\\Users\\julia\\.nuget\\packages\\microsoft.codecoverage\\16.9.4\\microsoft.codecoverage.16.9.4.nupkg.sha512",

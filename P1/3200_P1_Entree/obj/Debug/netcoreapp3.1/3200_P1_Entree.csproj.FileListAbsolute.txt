@@ -8,3 +8,13 @@ C:\dev\cpsc3200\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.AssemblyIn
 C:\dev\cpsc3200\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.csproj.CoreCompileInputs.cache
 C:\dev\cpsc3200\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.dll
 C:\dev\cpsc3200\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.pdb
+C:\dev\cpsc3200\P1\3200_P1_Entree\bin\Debug\netcoreapp3.1\3200_P1_Entree.deps.json
+C:\dev\cpsc3200\P1\3200_P1_Entree\bin\Debug\netcoreapp3.1\3200_P1_Entree.dll
+C:\dev\cpsc3200\P1\3200_P1_Entree\bin\Debug\netcoreapp3.1\3200_P1_Entree.pdb
+C:\dev\cpsc3200\P1\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.csproj.AssemblyReference.cache
+C:\dev\cpsc3200\P1\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.GeneratedMSBuildEditorConfig.editorconfig
+C:\dev\cpsc3200\P1\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.AssemblyInfoInputs.cache
+C:\dev\cpsc3200\P1\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.AssemblyInfo.cs
+C:\dev\cpsc3200\P1\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.csproj.CoreCompileInputs.cache
+C:\dev\cpsc3200\P1\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.dll
+C:\dev\cpsc3200\P1\3200_P1_Entree\obj\Debug\netcoreapp3.1\3200_P1_Entree.pdb

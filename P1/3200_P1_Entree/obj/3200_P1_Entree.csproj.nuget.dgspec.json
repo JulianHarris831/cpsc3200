@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\dev\\cpsc3200\\3200_P1_Entree\\3200_P1_Entree.csproj": {}
+    "C:\\dev\\cpsc3200\\P1\\3200_P1_Entree\\3200_P1_Entree.csproj": {}
   },
   "projects": {
-    "C:\\dev\\cpsc3200\\3200_P1_Entree\\3200_P1_Entree.csproj": {
+    "C:\\dev\\cpsc3200\\P1\\3200_P1_Entree\\3200_P1_Entree.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\dev\\cpsc3200\\3200_P1_Entree\\3200_P1_Entree.csproj",
+        "projectUniqueName": "C:\\dev\\cpsc3200\\P1\\3200_P1_Entree\\3200_P1_Entree.csproj",
         "projectName": "3200_P1_Entree",
-        "projectPath": "C:\\dev\\cpsc3200\\3200_P1_Entree\\3200_P1_Entree.csproj",
+        "projectPath": "C:\\dev\\cpsc3200\\P1\\3200_P1_Entree\\3200_P1_Entree.csproj",
         "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
-        "outputPath": "C:\\dev\\cpsc3200\\3200_P1_Entree\\obj\\",
+        "outputPath": "C:\\dev\\cpsc3200\\P1\\3200_P1_Entree\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
