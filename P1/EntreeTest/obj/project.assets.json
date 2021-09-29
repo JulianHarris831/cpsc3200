@@ -1660,6 +1660,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "3200_P1_Entree/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/3200_P1_Entree.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/3200_P1_Entree.dll": {}
+        }
       }
     }
   },
@@ -6036,10 +6046,16 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "3200_P1_Entree/1.0.0": {
+      "type": "project",
+      "path": "../3200_P1_Entree/3200_P1_Entree.csproj",
+      "msbuildProject": "../3200_P1_Entree/3200_P1_Entree.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "3200_P1_Entree >= 1.0.0",
       "MSTest.TestAdapter >= 2.2.3",
       "MSTest.TestFramework >= 2.2.3",
       "Microsoft.NET.Test.Sdk >= 16.9.4",
@@ -6074,7 +6090,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\dev\\cpsc3200\\P1\\3200_P1_Entree\\3200_P1_Entree.csproj": {
+              "projectPath": "C:\\dev\\cpsc3200\\P1\\3200_P1_Entree\\3200_P1_Entree.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

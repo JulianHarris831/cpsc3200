@@ -5,6 +5,7 @@
 //9/25/21 added fileRead function. 
 //9/26/21 added print function, unfinished.
 //9/27/21 added outage, findFoodIndex.
+//9/28/21 updated print to printNutrient, add main tests. 
 
 using System;
 using _3200_P1_Entree;
@@ -14,12 +15,13 @@ namespace P1
     class P1
     {
         const string filename = "EntreesTabDelimited.txt";
+        const int size = 10;
         
         static void Main(string[] args) 
         {
             Console.WriteLine("Welcome to P1!\n"); 
 
-            _3200_P1_Entree.Entree[] foodList = new _3200_P1_Entree.Entree[10]; //class declaration with size 10
+            _3200_P1_Entree.Entree[] foodList = new _3200_P1_Entree.Entree[size]; //class declaration with size 10
 
             fileRead(foodList);  //Loading data from txt file into class. 
 
@@ -31,9 +33,7 @@ namespace P1
             checkContained("Cheez It", "egg", foodList); //testing if a food contains a particular thing
         }
 
-        //all main implementation below
-
-        public static void fileRead(Entree[] foodList) //reading line by line
+        public static void fileRead(Entree[] foodList) //reading line by line, creating a class with each.
         {
             int counter = 0;
             string line;
@@ -41,7 +41,7 @@ namespace P1
             System.IO.StreamReader file = new System.IO.StreamReader(filename);
            
             file.ReadLine(); //skips title line in txt file.
-            while ((line = file.ReadLine()) != null && counter < 10)
+            while ((line = file.ReadLine()) != null && counter < size)
             {
                 foodList[counter] = new Entree(line);
                 counter++;
@@ -49,7 +49,7 @@ namespace P1
            
         }
 
-        public static int findFoodIndex(string target, Entree[] foodList) //returns index for use with print or contains queries. 
+        public static int findFoodIndex(string target, Entree[] foodList) //returns index for use with other main functions. 
         {
             int index = 0;
             while(foodList[index] != null && index < foodList.Length && foodList[index].getName() != target)
@@ -95,12 +95,12 @@ namespace P1
                 foodList[index].spoiled();
         }
 
-            public static void outage(Entree[] foodList)
+            public static void outage(Entree[] foodList)  //Sets inFridge to false for all Entrees. 
         {
             int index = 0;
             while (foodList[index] != null)
             {
-                foodList[index].setInFridge(false);
+                foodList[index].outage();
                 index++;
             }
             Console.WriteLine("Outage! All refrigerated food has spoiled.");
