@@ -18,14 +18,13 @@ Entree::Entree(string data, unsigned int size) //read constructor, needs sstream
 {
     stringstream parser(data);
     string entry;
-    int counter = 0;
 
     //make a while loop? potentially
 
     for(int i = 0; i < size; i++){
         if(getline(parser, entry, '\t')){
                 //Translate entry into var in respective switch
-                cout << "Entering " << entry << '\n';
+                cout << "Entering " << entry << " i is " << i << '\n';
                 switch(i)
                 {
                     case 0: //name
@@ -67,17 +66,20 @@ Entree::Entree(string data, unsigned int size) //read constructor, needs sstream
                     case 12: //ingredients list
                         ingredients = entry;
                         break;
-                    case 13: //contains arr, delimited by $
+                    case 13: //contains arr, delimited by $. might move this into the print function/helper, just to keep things light in the fileread.
                         if(entry != ""){
                             //declaration of counter or containParser here?
                             stringstream containParser(entry);
                             string item;
-                            contains = new string[5]; //resize if too big
+                            string *temp = new string[20]; //DELETE ALL THIS, STORE IN NORMAL STRING, PARSE DURING PRINT.
+                            int counter = 0;
                             while((getline(containParser, item, '$'))){
-                                contains[counter] = item;
-                                counter++;
+                                temp[counter] = item;
                                 cout << item << '\n';
+                                counter++;
                             }
+                            contains = new string[counter];
+                            contains = temp;
                         }
                         break;
                     default:

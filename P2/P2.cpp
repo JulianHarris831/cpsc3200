@@ -9,8 +9,8 @@ using namespace std;
 int main()
 {
     //sampleData 
-    string sampleData = "Fresh Brand - Sliced Apples	2.5	70	0	0	0	0	0	19	3	15	0	apples  eat$my$shorts";
-    Entree test(sampleData, 13);
+    string sampleData = "Fresh Brand - Sliced Apples	2.5\t70	0	0	0	0	0	19	3	15	0	apples\teat$my$shorts";
+    Entree test(sampleData, 14);
 
     return 0;
 }
