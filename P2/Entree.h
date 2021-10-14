@@ -16,7 +16,6 @@ private:
     float totalFat;
     float satFat;
     float transFat;
-
     unsigned int cholest;
     unsigned int sodium;
     unsigned int carbs;
@@ -25,23 +24,21 @@ private:
     unsigned int protein;
 
     string ingredients; 
-    string *contains = nullptr;  //use uniquePtr? 
+    string contains; 
 
-    //needs refrigeration bools and expiration
-    bool expired; 
+    string expDate; 
     bool perishable;
     bool refrigerated;
-    //needs a string for date maybe? or a char array
-    unsigned int expDate[8]; //YYYYMMDD
 
 public: 
 
     bool contained(string input);
-    bool isExpired();
-    bool isSpoiled();
-    void printNutrient(string target); //potentially make a bool?
+    bool isExpired(string currentDate);
+    bool isSpoiled(string currentDate);
+    void printNutrient(string target); 
     string getName();
 
     Entree(string data, unsigned int size);
+    //need to ensure move semantics are called properly with an overloaded assignment operator. 
     ~Entree();
 };

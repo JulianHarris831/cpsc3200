@@ -4,15 +4,85 @@
 #include "Entree.h"
 #include <iostream>
 #include <sstream>
-//#include <fstream> don't read files, just passing in a string to read
 
 using namespace std;
 
 string Entree::getName() { return name; }
 
-bool Entree::isExpired() { return expired; }
+bool Entree::isExpired(string currentDate) //will need a basic sstream to parse the date. 
+{ 
+    int year, month, day, cYear, cMonth, cDay; //representing expiration date and current date
+    stringstream parser(expDate);
+    parser >> year >> month >> day;
+    parser.str(currentDate);
+    parser >> cYear >> cMonth >> cDay;
 
-bool Entree::isSpoiled() { return (expired || (perishable && !refrigerated)); }
+    if(year < cYear)
+        return true; 
+    else if(month < cMonth)
+            return true;
+        else if(day < cDay)
+                return true;
+            else
+                return false;
+}  
+ 
+bool Entree::isSpoiled(string currentDate) { return (isExpired(currentDate) || (perishable && !refrigerated)); }
+
+bool Entree::contained(string input)  //we will need another stringstream check, parse the contains string and compare it with input. 
+{
+    stringstream parser(contains);
+    string item;
+    while(getline(parser, item, '$')){
+        if(item == input);
+            return true;
+    }
+    return false;
+}
+
+void Entree::printNutrient(string target)
+{
+    //goddamn c++ can't take a string as an argument for a switch, so this needs to become an if chain with return. REEEEEEE
+    switch (target)
+    {
+        case "calories":
+            cout << name << ' ' << target << " info: " << calories << '.';
+            break;
+        case "servings":
+            cout << name << ' ' << target << " info: " << servings << '.';
+            break;
+        case "total fat":
+            cout << name << ' ' << target << " info: " << totalFat << '.';
+            break;
+        case "saturated fat":
+            cout << name << ' ' << target << " info: " << satFat << '.';
+            break;
+        case "trans fat":
+            cout << name << ' ' << target << " info: " << transFat << '.';
+            break;
+        case "cholesterol":
+            cout << name << ' ' << target << " info: " << cholest << '.';
+            break;
+        case "sodium":
+            cout << name << ' ' << target << " info: " << sodium << '.';
+            break;
+        case "carbohydrates":
+            cout << name << ' ' << target << " info: " << carbs << '.';
+            break;
+        case "fiber":
+            cout << name << ' ' << target << " info: " << fiber << '.';
+            break;
+        case "sugars":
+            cout << name << ' ' << target << " info: " << sugars << '.';
+            break;
+        case "protein":
+            cout << name << ' ' << target << " info: " << protein << '.';
+            break;
+        default:
+            cout << name << " does not have " << target << " info, sorry.";
+            break;
+    } 
+}
 
 Entree::Entree(string data, unsigned int size) //read constructor, needs sstream
 {
@@ -67,23 +137,24 @@ Entree::Entree(string data, unsigned int size) //read constructor, needs sstream
                         ingredients = entry;
                         break;
                     case 13: //contains arr, delimited by $. might move this into the print function/helper, just to keep things light in the fileread.
-                        if(entry != ""){
-                            //declaration of counter or containParser here?
-                            stringstream containParser(entry);
-                            string item;
-                            string *temp = new string[20]; //DELETE ALL THIS, STORE IN NORMAL STRING, PARSE DURING PRINT.
-                            int counter = 0;
-                            while((getline(containParser, item, '$'))){
-                                temp[counter] = item;
-                                cout << item << '\n';
-                                counter++;
-                            }
-                            contains = new string[counter];
-                            contains = temp;
+                        contains = entry;
+                        break;
+                    case 14: //date data passed in as a string, used only when needed.
+                        expDate = entry;
+                        break;
+                    case 15: //whether or not item needs refrigeration
+                        if(entry == "yes"){ 
+                            perishable = true;
+                            refrigerated = true;
+                        }
+                        else {
+                            perishable = false;
+                            refrigerated = false;
                         }
                         break;
+
                     default:
-                        cout << "Entered default\n";
+                        //nothing should happen if wrong index.
                         break;
                 }
         }
@@ -91,5 +162,8 @@ Entree::Entree(string data, unsigned int size) //read constructor, needs sstream
      cout << "Finished test output\n";
 }
 
+//move semantics for copying resize in Vendor. 
+
+//deconstructor, we need to make sure we deallocate anything? nothing is dynamic really. 
 Entree::~Entree(){}
 
