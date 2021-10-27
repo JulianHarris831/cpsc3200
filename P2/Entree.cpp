@@ -1,100 +1,67 @@
 //Julian Harris
 //Entree.cpp
 
-#include "Entree.h"
-#include <iostream>
-#include <sstream>
+#include "entree.h"
 
 using namespace std;
 
 string Entree::getName() { return name; }
 
-bool Entree::isExpired(string currentDate) //will need a basic sstream to parse the date. 
+bool Entree::isExpired(string currentDate) //uses a basic sstream to parse the date. 
 { 
     int year, month, day, cYear, cMonth, cDay; //representing expiration date and current date
     stringstream parser(expDate);
-    parser >> year >> month >> day;
-    parser.str(currentDate);
-    parser >> cYear >> cMonth >> cDay;
+    parser >> year >> month >> day;  //loading expiration date
+    stringstream parserCurrent(currentDate);
+    parserCurrent >> cYear >> cMonth >> cDay; //loading current date
 
-    if(year < cYear)
-        return true; 
-    else if(month < cMonth)
-            return true;
-        else if(day < cDay)
-                return true;
-            else
-                return false;
+    if(year > cYear)  //If today's date is larger than the expiration date, it's expired.
+        return false; 
+    else if(month > cMonth)
+        return false;
+    else if(day > cDay)
+        return false;
+    else
+        return true;
 }  
  
-bool Entree::isSpoiled(string currentDate) { return (isExpired(currentDate) || (perishable && !refrigerated)); }
+bool Entree::isSpoiled(string currentDate) { return ((perishable && !refrigerated) || isExpired(currentDate)); }
 
-bool Entree::contained(string input)  //we will need another stringstream check, parse the contains string and compare it with input. 
+void Entree::outage() { refrigerated = false; }
+
+bool Entree::contained(string input)  
 {
-    stringstream parser(contains);
+    stringstream parser(contains); //stored contains data fed into a ss object to read
     string item;
-    while(getline(parser, item, '$')){
-        if(item == input);
-            return true;
+    bool found = false;
+    while(!found && getline(parser, item, '$')){
+        if(item == input)
+            found = true;
     }
-    return false;
+    return found;
 }
 
-void Entree::printNutrient(string target)
+string Entree::printAll() 
 {
-    //goddamn c++ can't take a string as an argument for a switch, so this needs to become an if chain with return. REEEEEEE
-    switch (target)
-    {
-        case "calories":
-            cout << name << ' ' << target << " info: " << calories << '.';
-            break;
-        case "servings":
-            cout << name << ' ' << target << " info: " << servings << '.';
-            break;
-        case "total fat":
-            cout << name << ' ' << target << " info: " << totalFat << '.';
-            break;
-        case "saturated fat":
-            cout << name << ' ' << target << " info: " << satFat << '.';
-            break;
-        case "trans fat":
-            cout << name << ' ' << target << " info: " << transFat << '.';
-            break;
-        case "cholesterol":
-            cout << name << ' ' << target << " info: " << cholest << '.';
-            break;
-        case "sodium":
-            cout << name << ' ' << target << " info: " << sodium << '.';
-            break;
-        case "carbohydrates":
-            cout << name << ' ' << target << " info: " << carbs << '.';
-            break;
-        case "fiber":
-            cout << name << ' ' << target << " info: " << fiber << '.';
-            break;
-        case "sugars":
-            cout << name << ' ' << target << " info: " << sugars << '.';
-            break;
-        case "protein":
-            cout << name << ' ' << target << " info: " << protein << '.';
-            break;
-        default:
-            cout << name << " does not have " << target << " info, sorry.";
-            break;
-    } 
+    stringstream ss("");
+    ss << "Name: " << name << "\nServings: " << servings << "\nCalories: " 
+    << calories << "\nTotal fat: " << totalFat << "\nSaturated fat: " << satFat
+    << "\nTrans fat: " << transFat << "\nCholesterol: " << cholest << "\nSodium: "
+    << sodium << "\nCarbohydrates: " << carbs << "\nFiber: " << fiber << "\nSugars: "
+    << sugars << "\nProtein: " << protein << "\nIngredients: " << ingredients 
+    << "\n\n";
+    return ss.str();
 }
 
 Entree::Entree(string data, unsigned int size) //read constructor, needs sstream
 {
     stringstream parser(data);
     string entry;
+    int validSize = size; //cs1 compiler doesn't like this being unsigned
 
-    //make a while loop? potentially
-
-    for(int i = 0; i < size; i++){
+    for(int i = 0; i < validSize; i++){
         if(getline(parser, entry, '\t')){
                 //Translate entry into var in respective switch
-                cout << "Entering " << entry << " i is " << i << '\n';
                 switch(i)
                 {
                     case 0: //name
@@ -159,11 +126,4 @@ Entree::Entree(string data, unsigned int size) //read constructor, needs sstream
                 }
         }
     }
-     cout << "Finished test output\n";
 }
-
-//move semantics for copying resize in Vendor. 
-
-//deconstructor, we need to make sure we deallocate anything? nothing is dynamic really. 
-Entree::~Entree(){}
-
