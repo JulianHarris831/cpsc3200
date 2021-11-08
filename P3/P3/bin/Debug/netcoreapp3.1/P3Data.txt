@@ -1,0 +1,16 @@
+Entrée	NumberOfServings	Calories	TotalFat(g)	SatFat(g)	TransFat(g)	Cholest(mg)	Sodium(mg)	TotCarb(g)	Fiber(g)	TotSugars(g)	Protein(g)	Ingredients	CONTAINS	expDate	perishable?
+Whole Milk	1	150	8	5	0	35	130	13	0	12	8	"Grade A Organic Milk, Vitamin D3"	dairy	2021 10 15	yes
+Dark Cola	1	140	0	0	0	0	45	39	0	39	0	"carbonated water, high fructose corn syrup, caramel color, natural flavors, caffeine"		2022 02 12	no
+Root Beer	1	170	0	0	0	0	65	47	0	45	0	"carbonated water, high fructose corn syrup, caramel color, natural and artifical flavors"		2022 03 21	no
+Orange Soda	1	170	0	0	0	0	70	44	0	43	0	"carbonated water, high fructose corn syrup, citric acid, natural flavors, caffeine"		2022 01 10	no
+Apple Juice	3	150	0	0	0	0	75	36	1	26	1	apples		2022 11 10	yes
+Cheesy Tortilla Chips	1	150	8	1	0	0	210	18	1	1	2	"cheese, corn, salt"	dairy	2022 10 11	no
+Jalapeno Chips	2	300	18	2	0	0	360	32	3	2	5	"potato, jalapeno, salt"		2022 05 12	no
+Cheese Puffs	6	150	10	1.5	0	6	200	13	0	1	2	"corn, cheese, whey, salt"	dairy	2019 04 10	no
+Carrot Sticks	1	35	0	0	0	0	60	8	2	4	1	carrots		2022 10 25	yes
+Apple Slices	1	130	0	0	0	0	0	34	5	25	1	apples		2022 10 24	yes
+Hamburger	1	250	9	3.5	0.5	25	520	31	2	6	12	"beef, flour"		2022 10 23	yes
+Cheeseburger	1	300	12	6	0.5	40	750	33	2	6	15	"beef, flour, cheese"	dairy	2022 10 23	yes
+Fishburger	1	380	18	3.5	0	40	640	38	2	5	15	"fish, flour"	fish	2022 10 23	yes
+Chicken Nuggets	1	470	30	5	0	65	900	30	2	0	22	"chicken, breading"		2022 10 26	yes
+Grilled Chicken Salad	1	320	9	5	0	70	960	30	6	11	30	"chicken, lettuce, ranch, cheese"	dairy	2021 10 28	yes
